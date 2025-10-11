@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>Pertemuan 2</title>
 <style>
+/* Section About */
 #about {
     background-color: #ffffff;
     border-radius: 10px;
@@ -52,6 +53,77 @@
     margin-bottom: 2px;
     }
 }
+
+/* Section Contact */
+#contact {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    padding: 60px 20px;
+    margin: 30px auto;
+    border-radius: 12px;
+    max-width: 700px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-out;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact label {
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 4px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #4e54c8;
+    box-shadow: 0 0 8px rgba(78, 84, 200, 0.3);
+    outline: none;
+    background-color: #fefefe;
+}
+
+#contact button {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#contact button:hover {
+    background-color: #0055aa;
+    transform: translateY(-2px);
+}
+
+#contact button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+#contact button[type="reset"]:hover {
+    background-color: #999;
+}
 </style> 
 </head> 
  
@@ -85,7 +157,7 @@
         <P><strong>Nama Adek</strong> : Cella</P>
         </section>
         
-        <section id="Kontak">
+        <section id="contact">
         <h2>Kontak Kami</h2>
         <form action="">
             <label for="txtNama">Nama:</label>
@@ -100,7 +172,7 @@
             <button type="submit">Kirim</button>
             <button type="reset">Batal</button>
         </form>
-        <p>contoh form.</p>
+        <p>Contoh Form.</p>
         </section>
     </main> 
  
