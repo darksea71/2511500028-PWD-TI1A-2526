@@ -50,8 +50,6 @@ header li a:active {
     transform: translateY(1px);
 }
 
-#about,
-
 #about {
     background: linear-gradient(135deg, #e0eafc, #cfdef3);
     border-radius: 10px;
@@ -134,6 +132,13 @@ header li a:active {
     border: 1px solid rgba(255, 255, 255, 35);
     background: rgba(255, 255, 255, .08);
     backdrop-filter: saturate (120%);
+    }
+
+    .menu-toggle {
+    display: block;
+    position: absolute;
+    Left: 16px;
+    top: 8px;
     }
 }
 
