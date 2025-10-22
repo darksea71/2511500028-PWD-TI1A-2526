@@ -1,4 +1,18 @@
 /* Section About */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    color: #333;
+    Line-height: 1.5;
+}
+
+#about,
+
 #about {
     background: linear-gradient(135deg, #e0eafc, #cfdef3);
     border-radius: 10px;
