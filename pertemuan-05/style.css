@@ -97,56 +97,60 @@ header li a:active {
 
 @media (max-width: 600px) {
     #about p {
-    flex-direction: column;
-    align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
     #about strong {
-    text-align: left;
-    padding-right: 0;
-    margin-bottom: 2px;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 2px;
     }
     
     header {
-    padding: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+        padding: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     header h1 {
-    margin: 0 0 8px;
-    font-size: 20px;
-    Line-height: 1.2;
+        margin: 0 0 8px;
+        font-size: 20px;
+        Line-height: 1.2;
     }
 
     header ul {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    margin: 8px 0 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin: 8px 0 0;
     }
 
     header li a {
-    display: block;
-    padding: 12px 14px;
-    border: 1px solid rgba(255, 255, 255, 35);
-    background: rgba(255, 255, 255, .08);
-    backdrop-filter: saturate (120%);
+        display: block;
+        padding: 12px 14px;
+        border: 1px solid rgba(255, 255, 255, 35);
+        background: rgba(255, 255, 255, .08);
+        backdrop-filter: saturate (120%);
     }
 
     .menu-toggle {
-    display: block;
-    position: absolute;
-    Left: 16px;
-    top: 8px;
+        display: block;
+        position: absolute;
+        Left: 16px;
+        top: 8px;
     }
 
     nav {
-    display: none;
-    flex-direction: column;
-    background:#003366;
-    width: 100%;
-    padding: 5px 0;
+        display: none;
+        flex-direction: column;
+        background:#003366;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    nav.active {
+        display: flex;
     }
 }
 
