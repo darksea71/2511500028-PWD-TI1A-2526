@@ -140,6 +140,14 @@ header li a:active {
     Left: 16px;
     top: 8px;
     }
+
+    nav {
+    display: none;
+    flex-direction: column;
+    background:#003366;
+    width: 100%;
+    padding: 5px 0;
+    }
 }
 
 /* Section Contact */
