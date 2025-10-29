@@ -26,12 +26,24 @@
     <main> 
         <section id="home"> 
         <h2>Selamat Datang</h2> 
+        <?php
+        echo "halo dunia!<br>";
+        echo "nama saya";
+        ?>
         <p>Ini contoh paragraf HTML.</p> 
         </section> 
  
         <section id="about"> 
+            <?php
+                $nim = 2511500028;
+                $Nim = "0202500025";
+            ?>
         <h2>Tentang Kami</h2> 
-        <p><strong>NIM:</strong> 2511500028</p>
+        <p><strong>NIM:</strong> 
+            <?php
+                echo $Nim;
+            ?>
+        </p>
         <p><strong>Nama:</strong> Hendy Junior Pereslin</p>
         <p><strong>Tempat/Tanggal Lahir:</strong> Jakarta, 09-07-2005 &#128512; </p>
         <p><strong>Hobi:</strong> Basket &hearts;</p>
