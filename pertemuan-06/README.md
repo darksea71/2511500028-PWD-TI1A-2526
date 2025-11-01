@@ -8,4 +8,5 @@ Hari ini, Rabu 22 Oktober 2025, saya mempelajari:
     <li>hello.php</li>
     <li>index.php</li>
     <li>variabel PHP ke section#about</li>
+    <li>Kalkulasi Nilai Akhir pada section#ipk</li>
 </ol>
