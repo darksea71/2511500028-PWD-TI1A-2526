@@ -28,7 +28,7 @@
         <h2>Selamat Datang</h2> 
         <?php
         echo "halo dunia!<br>";
-        echo "nama saya";
+        echo "nama saya hendy";
         ?>
         <p>Ini contoh paragraf HTML.</p> 
         </section> 
@@ -37,6 +37,13 @@
             <?php
                 $nim = 2511500028;
                 $Nim = "0202500025";
+                $nama = "Hendy Junior Pereslin";
+                $tempat_tanggallahir = "Jakarta, 09-07-2005 &#128512";
+                $hobi = "Basket &hearts;";
+                $pasangan = "Belum";
+                $pekerjaan = "Pelajar";
+                $nama_orang_tua = "Hendy";
+                $nama_adek = "Cella"
             ?>
         <h2>Tentang Kami</h2> 
         <p><strong>NIM:</strong> 
@@ -44,13 +51,41 @@
                 echo $Nim;
             ?>
         </p>
-        <p><strong>Nama:</strong> Hendy Junior Pereslin</p>
-        <p><strong>Tempat/Tanggal Lahir:</strong> Jakarta, 09-07-2005 &#128512; </p>
-        <p><strong>Hobi:</strong> Basket &hearts;</p>
-        <p><strong>Pasangan:</strong> Belum</p>
-        <p><strong>Pekerjaan:</strong> Pelajar</p> 
-        <P><strong>Nama Orang Tua:</strong> Hendy</P>
-        <P><strong>Nama Adek:</strong> Cella</P>
+        <p><strong>Nama:</strong>
+            <?php
+                echo $nama;
+            ?>
+        </p>
+        <p><strong>Tempat/Tanggal Lahir:</strong>
+            <?php
+                echo $tempat_tanggallahir;
+            ?>
+        </p>
+        <p><strong>Hobi:</strong>
+            <?php
+                echo $hobi;
+            ?>
+        </p>
+        <p><strong>Pasangan:</strong>
+            <?php
+                echo $pasangan;
+            ?>
+        </p>
+        <p><strong>Pekerjaan:</strong>
+            <?php
+                echo $pekerjaan;
+            ?>
+        </p> 
+        <P><strong>Nama Orang Tua:</strong>
+            <?php
+                echo $nama_orang_tua;
+            ?>
+        </P>
+        <P><strong>Nama Adek:</strong>
+            <?php
+             echo $nama_adek;
+            ?>
+        </P>
         </section>
         
         <section id="contact">
@@ -63,10 +98,9 @@
                     <label for="txtEmail"><span>Email:</span> 
                         <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required 
                 autocomplete="email"> 
-                </label> 
                     <label for="txtPesan"><span>Pesan Anda:</span> 
-                        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." 
-                required></textarea> 
+                        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea> 
+                        <small id="charCount">0/200 karakter</small> 
                     </label> 
                     <button type="submit">Kirim</button> 
                     <button type="reset">Batal</button>
