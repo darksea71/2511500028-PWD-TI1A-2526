@@ -11,4 +11,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Copy file UTS dari dosen</li>
   <li>membuat section pendaftaran profil pengunjung</li>
   <li>membuat style untuk section#register</li>
+  <li>membuat kode proses register di proses.php</li>
 </ol>
