@@ -10,4 +10,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>Copy file UTS dari dosen</li>
   <li>membuat section pendaftaran profil pengunjung</li>
+  <li>membuat style untuk section#register</li>
 </ol>

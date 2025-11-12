@@ -234,3 +234,92 @@ footer {
     width: 100%;
   }
 }
+
+#register {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#register h2 {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#register label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#register label > span {
+  min-width: 180px;
+  color: #003366;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 16px;
+  flex-shrink: 0;
+}
+
+#register input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  color: #000;
+  font-weight: normal;
+}
+
+#register button[type="submit"] {
+  background-color: #003366;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 12px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#register button[type="reset"] {
+  background-color: #b4b4b4;
+  color: #272727;
+  font-weight: 500;
+  margin-top: 12px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#register button:hover {
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  #register label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #register label > span {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 2px;
+  }
+
+  #register input,
+  #register button {
+    width: 100%;
+  }
+}

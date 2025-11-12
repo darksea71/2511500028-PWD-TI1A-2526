@@ -24,7 +24,7 @@ endif;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judul Halaman</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -54,7 +54,7 @@ endif;
 
     <section id="register">
       <h2>Pendaftaran Profil Pengunjung</h2>
-      <form action="proses.php" method="POST">
+      <form action="" method="POST">
         <label>
           <span>NIM:</span>
           <input type="text" name="nim" id="nim" required>
