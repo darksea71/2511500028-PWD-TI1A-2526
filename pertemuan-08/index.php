@@ -52,6 +52,59 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
+    <section id="register">
+      <h2>Pendaftaran Profil Pengunjung</h2>
+      <form action="proses.php" method="POST">
+        <label>
+          <span>NIM:</span>
+          <input type="text" name="nim" id="nim" required>
+        </label>
+
+        <label>
+          <span>Nama Lengkap:</span>
+          <input type="text" name="nama" id="nama" required>
+        </label>
+
+        <label>
+          <span>Tempat & Tanggal Lahir:</span>
+          <input type="text" name="ttl" id="ttl" required>
+        </label>
+
+        <label>
+          <span>Hobi</span>
+          <input type="text" name="hobi" id="hobi">
+        </label>
+
+        <label>
+          <span>Pasangan:</span>
+          <input type="text" name="pasangan" id="pasangan">
+        </label>
+
+        <label>
+          <span>Pekerjaan:</span>
+          <input type="text" name="pekerjaan" id="pekerjaan">
+        </label>
+
+        <label>
+          <span>Nama Orang Tua:</span>
+          <input type="text" name="ortu" id="ortu">
+        </label>
+
+        <label>
+          <span>Nama Kakak:</span>
+          <input type="text" name="kakak" id="kakak">
+        </label>
+
+        <label>
+          <span>Nama Adik:</span>
+          <input type="text" name="adik" id="adik">
+        </label>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+
     <section id="about">
       <?php
       $nim = 2511500010;

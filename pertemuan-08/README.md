@@ -9,4 +9,5 @@ Kelompok: TI1A<br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>Copy file UTS dari dosen</li>
+  <li>membuat section pendaftaran profil pengunjung</li>
 </ol>
