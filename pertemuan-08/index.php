@@ -1,41 +1,39 @@
 <?php
 session_start();
 
-$sesnama = "";
-if (isset($_SESSION["sesnama"])):
-  $sesnama = $_SESSION["sesnama"];
-endif;
+$nim        = $_SESSION["nim"]        ?? "";
+$nama       = $_SESSION["nama"]       ?? "";
+$tempat     = $_SESSION["tempat"]     ?? "";
+$tgl_lahir  = $_SESSION["tgl_lahir"]  ?? "";
+$hobi       = $_SESSION["hobi"]       ?? "";
+$pasangan   = $_SESSION["pasangan"]   ?? "";
+$pekerjaan  = $_SESSION["pekerjaan"]  ?? "";
+$ortu       = $_SESSION["ortu"]       ?? "";
+$kakak      = $_SESSION["kakak"]      ?? "";
+$adik       = $_SESSION["adik"]       ?? "";
 
-$sesemail = "";
-if (isset($_SESSION["sesemail"])):
-  $sesemail = $_SESSION["sesemail"];
-endif;
-
-$sespesan = "";
-if (isset($_SESSION["sespesan"])):
-  $sespesan = $_SESSION["sespesan"];
-endif;
+$sesnama  = $_SESSION["sesnama"]  ?? "";
+$sesemail = $_SESSION["sesemail"] ?? "";
+$sespesan = $_SESSION["sespesan"] ?? "";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Judul Halaman</title>
-  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+  <title>Pendaftaran Profil Pengunjung</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1>Ini Header</h1>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-      &#9776;
-    </button>
+    <h1>Selamat Datang</h1>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
+        <li><a href="#form">Pengunjung</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
@@ -43,137 +41,119 @@ endif;
   </header>
 
   <main>
+    
     <section id="home">
       <h2>Selamat Datang</h2>
-      <?php
-      echo "halo dunia!<br>";
-      echo "nama saya hadi";
-      ?>
-      <p>Ini contoh paragraf HTML.</p>
+      <p>Halo dunia!<br>Nama saya hendy</p>
     </section>
 
-    <section id="register">
+    
+    <section id="form">
       <h2>Pendaftaran Profil Pengunjung</h2>
       <form action="proses.php" method="POST">
-        <label>
-          <span>NIM:</span>
-          <input type="text" name="nim" id="nim" required>
+        
+        <label><span>NIM:</span>
+          <input type="text" name="nim" placeholder="Masukkan NIM" value="<?= $nim ?>" required>
         </label>
 
-        <label>
-          <span>Nama Lengkap:</span>
-          <input type="text" name="nama" id="nama" required>
+        <label><span>Nama Lengkap:</span>
+          <input type="text" name="nama" placeholder="Masukkan nama lengkap" value="<?= $nama ?>" required>
         </label>
 
-        <label>
-          <span>Tempat & Tanggal Lahir:</span>
-          <input type="text" name="ttl" id="ttl" required>
+        <label><span>Tempat Lahir:</span>
+          <input type="text" name="tempat" placeholder="Masukkan tempat lahir" value="<?= $tempat ?>" required>
         </label>
 
-        <label>
-          <span>Hobi</span>
-          <input type="text" name="hobi" id="hobi">
+        <label><span>Tanggal Lahir:</span>
+          <input type="text" name="tgl_lahir" placeholder="Masukkan tanggal lahir" value="<?= $tgl_lahir ?>" required>
         </label>
 
-        <label>
-          <span>Pasangan:</span>
-          <input type="text" name="pasangan" id="pasangan">
+        <label><span>Hobi:</span>
+          <input type="text" name="hobi" placeholder="Masukkan hobi" value="<?= $hobi ?>">
         </label>
 
-        <label>
-          <span>Pekerjaan:</span>
-          <input type="text" name="pekerjaan" id="pekerjaan">
+        <label><span>Pasangan:</span>
+          <input type="text" name="pasangan" placeholder="Masukkan nama pasangan" value="<?= $pasangan ?>">
         </label>
 
-        <label>
-          <span>Nama Orang Tua:</span>
-          <input type="text" name="ortu" id="ortu">
+        <label><span>Pekerjaan:</span>
+          <input type="text" name="pekerjaan" placeholder="Masukkan pekerjaan" value="<?= $pekerjaan ?>">
         </label>
 
-        <label>
-          <span>Nama Kakak:</span>
-          <input type="text" name="kakak" id="kakak">
+        <label><span>Nama Orang Tua:</span>
+          <input type="text" name="ortu" placeholder="Masukkan nama orang tua" value="<?= $ortu ?>">
         </label>
 
-        <label>
-          <span>Nama Adik:</span>
-          <input type="text" name="adik" id="adik">
+        <label><span>Nama Kakak:</span>
+          <input type="text" name="kakak" placeholder="Masukkan nama kakak" value="<?= $kakak ?>">
         </label>
 
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
+        <label><span>Nama Adik:</span>
+          <input type="text" name="adik" placeholder="Masukkan nama adik" value="<?= $adik ?>">
+        </label>
+
+        <div class="button-container">
+          <button type="submit">Kirim</button>
+          <button type="reset">Batal</button>
+        </div>
       </form>
     </section>
 
+    
     <section id="about">
-      <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
-      ?>
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
-      </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
+      <?php if (!empty($nim)): ?>
+        <p><strong>NIM:</strong> <?= $nim ?></p>
+        <p><strong>Nama Lengkap:</strong> <?= $nama ?> &#127926;</p>
+        <p><strong>Tempat Lahir:</strong> <?= $tempat ?></p>
+        <p><strong>Tanggal Lahir:</strong> <?= $tgl_lahir ?></p>
+        <p><strong>Hobi:</strong> <?= $hobi ?></p>
+        <p><strong>Pasangan:</strong> <?= $pasangan ?></p>
+        <p><strong>Pekerjaan:</strong> <?= $pekerjaan ?></p>
+        <p><strong>Nama Orang Tua:</strong> <?= $ortu ?></p>
+        <p><strong>Nama Kakak:</strong> <?= $kakak ?></p>
+        <p><strong>Nama Adik:</strong> <?= $adik ?></p>
+      <?php else: ?>
+        <p>Belum ada data pengunjung. Silakan isi form di atas &hearts;</p>
+      <?php endif; ?>
     </section>
 
+    
     <section id="contact">
       <h2>Kontak Kami</h2>
       <form action="proses.php" method="POST">
-
-        <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+        <label><span>Nama:</span>
+          <input type="text" name="txtNama" placeholder="Masukkan nama" required>
         </label>
 
-        <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+        <label><span>Email:</span>
+          <input type="email" name="txtEmail" placeholder="Masukkan email" required>
         </label>
 
-        <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-          <small id="charCount">0/200 karakter</small>
+        <label><span>Pesan Anda:</span>
+          <textarea name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
         </label>
 
-
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
+        <div class="button-container">
+          <button type="submit">Kirim</button>
+          <button type="reset">Batal</button>
+        </div>
       </form>
 
       <?php if (!empty($sesnama)): ?>
-        <br><hr>
-        <h2>Yang menghubungi kami</h2>
-        <p><strong>Nama :</strong> <?php echo $sesnama ?></p>
-        <p><strong>Email :</strong> <?php echo $sesemail ?></p>
-        <p><strong>Pesan :</strong> <?php echo $sespesan ?></p>
+        <hr>
+        <h3>Yang Menghubungi Kami:</h3>
+        <p><strong>Nama:</strong> <?= $sesnama ?></p>
+        <p><strong>Email:</strong> <?= $sesemail ?></p>
+        <p><strong>Pesan:</strong> <?= $sespesan ?></p>
       <?php endif; ?>
-
-
-
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Hendy Junior Pereslin [2511500028]</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

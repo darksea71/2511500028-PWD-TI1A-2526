@@ -235,7 +235,7 @@ footer {
   }
 }
 
-#register {
+#form {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -244,7 +244,7 @@ footer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#register h2 {
+#form h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
@@ -252,7 +252,7 @@ footer {
   margin-bottom: 16px;
 }
 
-#register label {
+#form label {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -261,7 +261,7 @@ footer {
   border-bottom: 1px solid #e6e6e6;
 }
 
-#register label > span {
+#form label > span {
   min-width: 180px;
   color: #003366;
   font-weight: 600;
@@ -270,56 +270,70 @@ footer {
   flex-shrink: 0;
 }
 
-#register input {
+#form input {
   flex: 1;
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 8px;
   color: #000;
   font-weight: normal;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#register button[type="submit"] {
+#form .button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#form button {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+#form button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
-  margin-top: 12px;
-  padding: 10px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
-#register button[type="reset"] {
+#form button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
   font-weight: 500;
-  margin-top: 12px;
-  padding: 10px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
-#register button:hover {
+#form button[type="submit"]:hover {
+  background-color: #0379ee;
   transform: translateY(-1px);
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#form button[type="reset"]:hover {
+  background-color: #cccccc;
+  transform: translateY(-1px);
 }
 
 @media (max-width: 600px) {
-  #register label {
+  #form label {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  #register label > span {
+  #form label > span {
     text-align: left;
     padding-right: 0;
     margin-bottom: 2px;
   }
 
-  #register input,
-  #register button {
+  #form input,
+  #form button {
     width: 100%;
   }
 }
