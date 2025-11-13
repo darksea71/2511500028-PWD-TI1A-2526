@@ -1,4 +1,6 @@
 <?php
-  echo $_GET["txtNama"];
-  echo $_GET["txtEmail"];
+session_start();
+echo $_GET["txtNama"];
+echo $_GET["txtEmail"];
+echo $_GET["txtPesan"];
 ?>
