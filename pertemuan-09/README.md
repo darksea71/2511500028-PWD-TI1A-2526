@@ -7,4 +7,5 @@ Hari ini, Rabu 26 November 2025, saya mempelajari:
 <ol>
     <li>mengubah data POST ke Array Associative di proses.php</li>
     <li>mengubah kode biodata</li>
+    <li>menampilkan array menggunakan looping foreach</li>
 </ol>
