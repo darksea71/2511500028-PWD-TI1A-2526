@@ -6,4 +6,5 @@ Nama: Hendy Junior Pereslin<br><br>
 Hari ini, Rabu 26 November 2025, saya mempelajari:
 <ol>
     <li>mengubah data POST ke Array Associative di proses.php</li>
+    <li>mengubah kode biodata</li>
 </ol>
