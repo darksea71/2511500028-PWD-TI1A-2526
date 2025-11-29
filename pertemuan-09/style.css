@@ -52,6 +52,7 @@ header li a:active {
 #home:target~header nav a[href="#home"],
 #about:target~header nav a[href="#about"],
 #contact:target~header nav a[href="#contact"],
+#kontak:target~header nav a[href="#kontak"],
 #biodata:target~header nav a[href="#biodata"] {
   background: #fff;
   color: #003366;
@@ -63,6 +64,7 @@ header li a:active {
 #home,
 #about,
 #contact,
+#kontak,
 #biodata {
   background-color: #ffffff;
   border-radius: 10px;
@@ -75,6 +77,7 @@ header li a:active {
 #home h2,
 #about h2,
 #contact h2,
+#kontak h2,
 #biodata h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
@@ -89,6 +92,7 @@ header li a:active {
 
 #about p,
 #contact label,
+#kontak label,
 #biodata label {
   display: flex;
   justify-content: flex-start;
@@ -100,6 +104,7 @@ header li a:active {
 
 #about strong,
 #contact label>span,
+#kontak label>span,
 #biodata label>span {
   min-width: 180px;
   color: #003366;

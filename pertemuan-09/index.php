@@ -154,7 +154,7 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="kontak">
       <h2>Yang Menghubungi Kami</h2>
-      <?= tampilkanKontak( $userConfig , $kontak) ?>  
+      <?= tampilkanKontak( $userConfig , $kontak) ?>
     </section>
 
   </main>
