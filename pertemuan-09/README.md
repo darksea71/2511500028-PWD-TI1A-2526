@@ -15,5 +15,6 @@ Hari ini, Rabu 26 November 2025, saya mempelajari:
     <li>menambahkan kode untuk merender hasil atau output biodata fungsi.php</li>
     <li>mengubah foreach menjadi tampilkanBiodata</li>
     <li>menambahkan kode require_once pada index.php</li>
-    <li></li>
+    <li>mengubah data POST KE Array Associative di proses.php pada kontak</li>
+    <li>membuat kode session kontak di proses.php</li>
 </ol>
