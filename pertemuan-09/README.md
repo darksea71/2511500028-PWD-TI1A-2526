@@ -5,6 +5,7 @@ Nama: Hendy Junior Pereslin<br><br>
 
 Hari ini, Rabu 26 November 2025, saya mempelajari:
 <ol>
+    <li>copy file pertemuan-09 dari dosen</li>
     <li>mengubah data POST ke Array Associative di proses.php</li>
     <li>mengubah kode biodata</li>
     <li>menampilkan array menggunakan looping foreach di section#about</li>
@@ -12,4 +13,7 @@ Hari ini, Rabu 26 November 2025, saya mempelajari:
     <li>membuat dan menambahkan kode di file fungsi.php di folder pertemuan-09</li>
     <li>menambahkan kode format tanggal pada fungsi.php</li>
     <li>menambahkan kode untuk merender hasil atau output biodata fungsi.php</li>
+    <li>mengubah foreach menjadi tampilkanBiodata</li>
+    <li>menambahkan kode require_once pada index.php</li>
+    <li></li>
 </ol>
