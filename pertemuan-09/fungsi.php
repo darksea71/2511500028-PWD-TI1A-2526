@@ -24,3 +24,17 @@ function tampilkanBiodata($conf, $arr)
     }
     return $html;
 }
+
+function tampilkanKontak($config, $array)
+{
+    $kontak = "";
+    foreach ($config as $kunci => $value) {
+        $label = $value["label"];
+        $isi = bersihkan($array[$kunci] ?? '');
+        $suffix = $value["suffix"];
+
+        $kontak .= "<label><span>{$label}</span> {$isi}{$suffix}</label>";
+    }
+    return $kontak;
+}
+?>
