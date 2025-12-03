@@ -13,4 +13,7 @@ Hari ini, Rabu 03 Desember 2025, saya mempelajari:
     <li>membuat file dan memasukan kode ke read.php</li>
     <li>melakukan pengisian data atau record pada tabel tbl_tamu di phpmyadmin</li>
     <li>mengcopy file read.php, hasil copy di rename menjadi read_inc.php dan diedit kode pada read_inc.php</li>
+    <li>menampilkan data dari read_inc.php</li>
+    <li>menghapus kode di index.php</li>
+    <li>export database db_pwd2025</li>
 </ol>
