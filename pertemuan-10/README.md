@@ -11,4 +11,6 @@ Hari ini, Rabu 03 Desember 2025, saya mempelajari:
     <li>membuat data base db_pwd2025 di phpmyadmin</li>
     <li>membuat tabel tbl_tamu di phpmyadmin</li>
     <li>membuat file dan memasukan kode ke read.php</li>
+    <li>melakukan pengisian data atau record pada tabel tbl_tamu di phpmyadmin</li>
+    <li>mengcopy file read.php, hasil copy di rename menjadi read_inc.php dan diedit kode pada read_inc.php</li>
 </ol>
