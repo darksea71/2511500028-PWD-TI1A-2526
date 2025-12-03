@@ -8,4 +8,7 @@ Hari ini, Rabu 03 Desember 2025, saya mempelajari:
     <li>copy file pertemuan-10 dari dosen</li>
     <li>menghapus file index.html</li>
     <li>membuat file dan memasukan kode ke koneksi.php</li>
+    <li>membuat data base db_pwd2025 di phpmyadmin</li>
+    <li>membuat tabel tbl_tamu di phpmyadmin</li>
+    <li>membuat file dan memasukan kode ke read.php</li>
 </ol>
