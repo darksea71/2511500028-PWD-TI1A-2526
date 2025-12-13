@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 03, 2025 at 05:35 AM
+-- Generation Time: Dec 13, 2025 at 06:28 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_pwd2025`
 --
-CREATE DATABASE IF NOT EXISTS `db_pwd2025` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `db_pwd2025`;
 
 -- --------------------------------------------------------
 
@@ -33,17 +31,20 @@ CREATE TABLE `tbl_tamu` (
   `cid` int(11) NOT NULL,
   `cnama` varchar(100) DEFAULT NULL,
   `cemail` varchar(100) DEFAULT NULL,
-  `cpesan` text
+  `cpesan` text,
+  `dcreated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_tamu`
 --
 
-INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`) VALUES
-(1, 'John Cenna', 'johncenna@gmail.com', 'Semua baik baik saja.'),
-(2, 'James Bond', 'Jamesbond@gmail.com', 'Terus maju.'),
-(3, 'Arthur Holland', 'arthurholland@gmail.com', 'Ayo pergi ke pantai.');
+INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
+(1, 'John Cenna', 'johncenna@gmail.com', 'Semua baik baik saja.', '2025-12-14 00:54:18'),
+(2, 'James Bond', 'Jamesbond@gmail.com', 'Terus maju.', '2025-12-14 00:54:18'),
+(3, 'Arthur Holland', 'arthurholland@gmail.com', 'Ayo pergi ke pantai.', '2025-12-14 00:54:18'),
+(4, 'Bona', 'bona@gmail.com', 'Semoga sukses.', '2025-12-14 00:54:18'),
+(5, 'sola', 'sola@gmail.com', 'Mari pergi berbelanja', '2025-12-14 00:54:18');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `tbl_tamu`
 -- AUTO_INCREMENT for table `tbl_tamu`
 --
 ALTER TABLE `tbl_tamu`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
