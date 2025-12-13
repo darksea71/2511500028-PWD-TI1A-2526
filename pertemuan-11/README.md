@@ -10,5 +10,5 @@ Hari ini, Rabu 03 Desember 2025, saya mempelajari:
     <li>merewrite proses.php</li>
     <li>menambahkan nomor urut (bukan ID) dan tabel Create Art pada read.php di kolom pertama</li>
     <li>menambahkan kode validasi dan input captcha sederhana pada proses.php</li>
-    <li>menambahkan kode validasi dan form captcha pada index.php</li>
+    <li>menambahkan kode form captcha pada index.php</li>
 </ol>
