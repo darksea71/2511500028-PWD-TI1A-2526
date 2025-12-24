@@ -10,4 +10,6 @@ Hari ini, Rabu 24 Desember 2025, saya mempelajari:
     <li>menyesuaian kode di proses_delete.php untuk proses hapus</li>
     <li>menambahkan parameter cid untuk link delete di read.php</li>
     <li>memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
+    <li>menambah konfirmasi delete pada read.php</li>
+    <li>menambahkan konfirmasi nama data yang ingin di delete pada read.php</li>
 </ol>
