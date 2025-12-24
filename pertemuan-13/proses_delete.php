@@ -29,7 +29,7 @@
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('readd.php');
+    redirect_ke('read.php');
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
