@@ -38,12 +38,20 @@ require_once __DIR__ . '/fungsi.php';
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
+    <?php
+    $flash_biodata_sukses = $_SESSION['flash_biodata_sukses'] ?? '';
+    $flash_biodata_error  = $_SESSION['flash_biodata_error'] ?? '';
+    $old = $_SESSION['old_biodata'] ?? [];
+
+    unset($_SESSION['flash_biodata_sukses'], $_SESSION['flash_biodata_error'], $_SESSION['old_biodata']);
+    ?>
+
     <section id="biodata">
       <h2>Biodata Sederhana Mahasiswa</h2>
 
-      <?php if (!empty($flash_sukses)): ?>
+      <?php if (!empty($flash_biodata_sukses)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
-          <?= $flash_sukses; ?>
+          <?= $flash_biodata_sukses; ?>
         </div>
       <?php endif; ?>
 
