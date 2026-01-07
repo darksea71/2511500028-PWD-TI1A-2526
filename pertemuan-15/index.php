@@ -88,7 +88,7 @@ require_once __DIR__ . '/fungsi.php';
     </section>
 
     <?php
-    $biodata = $_SESSION["biodata"] ?? [];
+    $biodata = $_SESSION['old_biodata'] ?? [];
 
     $fieldConfig = [
       "nim" => ["label" => "NIM:", "suffix" => ""],
