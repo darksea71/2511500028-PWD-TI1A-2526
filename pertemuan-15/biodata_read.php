@@ -52,12 +52,9 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="biodata_edit.php?cnim=<?= urlencode($row['cnim']); ?>">
-          Edit
-        </a>
-        |
+        <a href="biodata_edit.php?cnim=<?= (int)$row['cnim']; ?>">Edit</a>
         <a onclick="return confirm('Hapus biodata <?= htmlspecialchars($row['cnama_lengkap']); ?>?')"
-           href="biodata_delete.php?cnim=<?= urlencode($row['cnim']); ?>">
+           href="biodata_delete.php?cnim=<?= (int)$row['cnim']; ?>">
           Delete
         </a>
       </td>
