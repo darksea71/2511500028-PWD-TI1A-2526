@@ -3,7 +3,7 @@ session_start();
 require 'koneksi.php';
 require 'fungsi.php';
 
-$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY cnim ASC";
+$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY cid ASC";
 $q = mysqli_query($conn, $sql);
 if (!$q) {
     die("Query error: " . mysqli_error($conn));
@@ -35,6 +35,7 @@ unset($_SESSION['flash_biodata_sukses'], $_SESSION['flash_biodata_error']);
   <tr>
     <th>No</th>
     <th>Aksi</th>
+    <th>ID</th>
     <th>NIM</th>
     <th>Nama Lengkap</th>
     <th>Tempat Lahir</th>
@@ -52,12 +53,13 @@ unset($_SESSION['flash_biodata_sukses'], $_SESSION['flash_biodata_error']);
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="biodata_edit.php?cnim=<?= (int)$row['cnim']; ?>">Edit</a>
+        <a href="biodata_edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
         <a onclick="return confirm('Hapus biodata <?= htmlspecialchars($row['cnama_lengkap']); ?>?')"
-           href="biodata_delete.php?cnim=<?= (int)$row['cnim']; ?>">
+           href="biodata_delete.php?cnim=<?= (int)$row['cid']; ?>">
           Delete
         </a>
       </td>
+      <td><?= $row['cid']; ?></td>
       <td><?= htmlspecialchars($row['cnim']); ?></td>
       <td><?= htmlspecialchars($row['cnama_lengkap']); ?></td>
       <td><?= htmlspecialchars($row['ctempat_lahir']); ?></td>

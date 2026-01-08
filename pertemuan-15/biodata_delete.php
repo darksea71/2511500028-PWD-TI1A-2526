@@ -3,6 +3,8 @@ session_start();
 require __DIR__ . '/koneksi.php';
 require_once __DIR__ . '/fungsi.php';
 
+# validasi cnim wajib angka dan > 0
+$nim = filter_input(INPUT_POST, 'txtNim', FILTER_SANITIZE_NUMBER_INT);
 
 
 /*
