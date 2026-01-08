@@ -6,7 +6,7 @@ require_once __DIR__ . '/fungsi.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $_SESSION['flash_error'] = 'Akses tidak valid.';
+    $_SESSION['flash_biodata_error'] = 'Akses tidak valid.';
     redirect_ke('index.php#biodata');
 }
 
@@ -49,7 +49,7 @@ if (!empty($errors)) {
         'adik'      => $adik,
     ];
 
-    $_SESSION['flash_error'] = implode('<br>', $errors);
+    $_SESSION['flash_biodata_error'] = implode('<br>', $errors);
     redirect_ke('index.php#biodata');
 }
 
@@ -62,7 +62,7 @@ $sql = "INSERT INTO tbl_biodata_mahasiswa
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
-    $_SESSION['flash_error'] = 'Kesalahan sistem (prepare statement gagal).';
+    $_SESSION['flash_biodata_error'] = 'Kesalahan sistem (prepare statement gagal).';
     redirect_ke('index.php#biodata');
 }
 
@@ -83,11 +83,11 @@ mysqli_stmt_bind_param(
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old_biodata']);
-    $_SESSION['flash_sukses'] = 'Biodata mahasiswa berhasil disimpan.';
+    $_SESSION['flash_biodata_sukses'] = 'Biodata mahasiswa berhasil disimpan.';
     redirect_ke('index.php#biodata');
 } else {
     $_SESSION['old_biodata'] = $_POST;
-    $_SESSION['flash_error'] = 'Data biodata gagal disimpan.';
+    $_SESSION['flash_biodata_error'] = 'Data biodata gagal disimpan.';
     redirect_ke('index.php#biodata');
 }
 
