@@ -29,8 +29,9 @@ if ($nama === '')     $errors[] = 'Nama lengkap wajib diisi.';
 if ($tempat === '')   $errors[] = 'Tempat lahir wajib diisi.';
 if ($tanggal === '')  $errors[] = 'Tanggal lahir wajib diisi.';
 
-if (strlen($nim) < 5)  $errors[] = 'NIM minimal 5 karakter.';
+if (strlen($nim) < 5)  $errors[] = 'NIM minimal 5 angka.';
 if (strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
+if (!ctype_digit($nim))$errors[] = 'NIM harus berupa angka.';
 
 if (!empty($errors)) {
     $_SESSION['old_biodata'] = [
