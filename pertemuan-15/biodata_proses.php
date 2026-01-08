@@ -11,29 +11,26 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $nim       = bersihkan($_POST['txtNim'] ?? '');
-$nama      = bersihkan($_POST['txtNmLengkap'] ?? '');
-$tempat    = bersihkan($_POST['txtT4Lhr'] ?? '');
-$tanggal   = bersihkan($_POST['txtTglLhr'] ?? '');
+$nama      = bersihkan($_POST['txtNama'] ?? '');
+$tempat    = bersihkan($_POST['txtTempat'] ?? '');
+$tanggal   = bersihkan($_POST['txtTanggal'] ?? '');
 $hobi      = bersihkan($_POST['txtHobi'] ?? '');
 $pasangan  = bersihkan($_POST['txtPasangan'] ?? '');
-$kerja     = bersihkan($_POST['txtKerja'] ?? '');
-$ortu      = bersihkan($_POST['txtNmOrtu'] ?? '');
-$kakak     = bersihkan($_POST['txtNmKakak'] ?? '');
-$adik      = bersihkan($_POST['txtNmAdik'] ?? '');
+$kerja     = bersihkan($_POST['txtPekerjaan'] ?? '');
+$ortu      = bersihkan($_POST['txtOrtu'] ?? '');
+$kakak     = bersihkan($_POST['txtKakak'] ?? '');
+$adik      = bersihkan($_POST['txtAdik'] ?? '');
 
 
 $errors = [];
 
-if ($nim === '')          $errors[] = 'NIM wajib diisi.';
-if ($nama === '')         $errors[] = 'Nama lengkap wajib diisi.';
-if ($tempat === '')       $errors[] = 'Tempat lahir wajib diisi.';
-if ($tanggal === '')      $errors[] = 'Tanggal lahir wajib diisi.';
-if ($kerja === '')        $errors[] = 'Pekerjaan wajib diisi.';
-if ($ortu === '')         $errors[] = 'Nama orang tua wajib diisi.';
+if ($nim === '')      $errors[] = 'NIM wajib diisi.';
+if ($nama === '')     $errors[] = 'Nama lengkap wajib diisi.';
+if ($tempat === '')   $errors[] = 'Tempat lahir wajib diisi.';
+if ($tanggal === '')  $errors[] = 'Tanggal lahir wajib diisi.';
 
-if (strlen($nim) < 5)     $errors[] = 'NIM minimal 5 karakter.';
-if (strlen($nama) < 3)    $errors[] = 'Nama minimal 3 karakter.';
-
+if (strlen($nim) < 5)  $errors[] = 'NIM minimal 5 karakter.';
+if (strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
 
 if (!empty($errors)) {
     $_SESSION['old_biodata'] = [
