@@ -16,7 +16,7 @@ $tempat    = bersihkan($_POST['txtTempat'] ?? '');
 $tanggal   = bersihkan($_POST['txtTanggal'] ?? '');
 $hobi      = bersihkan($_POST['txtHobi'] ?? '');
 $pasangan  = bersihkan($_POST['txtPasangan'] ?? '');
-$kerja     = bersihkan($_POST['txtPekerjaan'] ?? '');
+$pekerjaan = bersihkan($_POST['txtPekerjaan'] ?? '');
 $ortu      = bersihkan($_POST['txtOrtu'] ?? '');
 $kakak     = bersihkan($_POST['txtKakak'] ?? '');
 $adik      = bersihkan($_POST['txtAdik'] ?? '');
@@ -40,7 +40,7 @@ if (!empty($errors)) {
         'tanggal'   => $tanggal,
         'hobi'      => $hobi,
         'pasangan'  => $pasangan,
-        'pekerjaan' => $kerja,
+        'pekerjaan' => $pekerjaan,
         'ortu'      => $ortu,
         'kakak'     => $kakak,
         'adik'      => $adik,
@@ -72,7 +72,7 @@ mysqli_stmt_bind_param(
     $tanggal,
     $hobi,
     $pasangan,
-    $kerja,
+    $pekerjaan,
     $ortu,
     $kakak,
     $adik

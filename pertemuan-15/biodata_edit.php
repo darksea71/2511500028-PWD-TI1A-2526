@@ -4,10 +4,10 @@ require 'koneksi.php';
 require 'fungsi.php';
 
 
-$cnim = filter_input(INPUT_GET, 'cnim', FILTER_SANITIZE_SPECIAL_CHARS);
+$cnim = filter_input(INPUT_GET, 'cnim', FILTER_VALIDATE_INT);
 
 if (!$cnim) {
-  $_SESSION['flash_error'] = 'Akses tidak valid.';
+  $_SESSION['flash_biodata_error'] = 'Akses tidak valid.';
   redirect_ke('biodata_read.php');
 }
 
@@ -23,7 +23,7 @@ $stmt = mysqli_prepare(
 );
 
 if (!$stmt) {
-  $_SESSION['flash_error'] = 'Query tidak benar.';
+  $_SESSION['flash_biodata_error'] = 'Query tidak benar.';
   redirect_ke('biodata_read.php');
 }
 
@@ -34,7 +34,7 @@ $row = mysqli_fetch_assoc($res);
 mysqli_stmt_close($stmt);
 
 if (!$row) {
-  $_SESSION['flash_error'] = 'Data biodata tidak ditemukan.';
+  $_SESSION['flash_biodata_error'] = 'Data biodata tidak ditemukan.';
   redirect_ke('biodata_read.php');
 }
 
@@ -51,10 +51,10 @@ $kakak     = $row['cnama_kakak'] ?? '';
 $adik      = $row['cnama_adik'] ?? '';
 
 # Ambil error & old input
-$flash_error = $_SESSION['flash_error'] ?? '';
-$old = $_SESSION['old'] ?? [];
+$flash_error = $_SESSION['flash_biodata_error'] ?? '';
+$old = $_SESSION['old_biodata'] ?? [];
 
-unset($_SESSION['flash_error'], $_SESSION['old']);
+unset($_SESSION['flash_biodata_error'], $_SESSION['old_biodata']);
 
 if (!empty($old)) {
   $nama      = $old['nama'] ?? $nama;
@@ -96,55 +96,74 @@ if (!empty($old)) {
 
       <form action="biodata_update.php" method="POST">
 
-        <label>
+        <label for="txtNim">
           <span>NIM:</span>
-          <input type="text" name="txtNim" value="<?= htmlspecialchars($nim); ?>" readonly>
+          <input type="text" id="txtNim" name="txtNim"
+            value="<?= !empty($nim) ? $nim : '' ?>" readonly>
         </label>
 
-        <label>
+        <label for="txtNama">
           <span>Nama Lengkap:</span>
-          <input type="text" name="txtNama" required value="<?= htmlspecialchars($nama); ?>">
+          <input type="text" id="txtNama" name="txtNama"
+            placeholder="Masukkan nama lengkap" required
+            value="<?= !empty($nama) ? $nama : '' ?>">
         </label>
 
-        <label>
+        <label for="txtTempat">
           <span>Tempat Lahir:</span>
-          <input type="text" name="txtTempat" required value="<?= htmlspecialchars($tempat); ?>">
+          <input type="text" id="txtTempat" name="txtTempat"
+            placeholder="Masukkan tempat lahir" required
+            value="<?= !empty($tempat) ? $tempat : '' ?>">
         </label>
 
-        <label>
+        <label for="txtTanggal">
           <span>Tanggal Lahir:</span>
-          <input type="date" name="txtTanggal" required value="<?= htmlspecialchars($tanggal); ?>">
+          <input type="date" id="txtTanggal" name="txtTanggal" required
+            value="<?= !empty($tanggal) ? $tanggal : '' ?>">
         </label>
 
-        <label>
+        <label for="txtHobi">
           <span>Hobi:</span>
-          <input type="text" name="txtHobi" value="<?= htmlspecialchars($hobi); ?>">
+          <input type="text" id="txtHobi" name="txtHobi"
+            placeholder="Masukkan hobi"
+            value="<?= !empty($hobi) ? $hobi : '' ?>">
         </label>
 
-        <label>
+        <label for="txtPasangan">
           <span>Pasangan:</span>
-          <input type="text" name="txtPasangan" value="<?= htmlspecialchars($pasangan); ?>">
+          <input type="text" id="txtPasangan" name="txtPasangan"
+            placeholder="Masukkan pasangan"
+            value="<?= !empty($pasangan) ? $pasangan : '' ?>">
         </label>
 
-        <label>
+        <label for="txtPekerjaan">
           <span>Pekerjaan:</span>
-          <input type="text" name="txtPekerjaan" value="<?= htmlspecialchars($pekerjaan); ?>">
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan"
+            placeholder="Masukkan pekerjaan"
+            value="<?= !empty($pekerjaan) ? $pekerjaan : '' ?>">
         </label>
 
-        <label>
+        <label for="txtOrtu">
           <span>Nama Orang Tua:</span>
-          <input type="text" name="txtOrtu" value="<?= htmlspecialchars($ortu); ?>">
+          <input type="text" id="txtOrtu" name="txtOrtu"
+            placeholder="Masukkan nama orang tua"
+            value="<?= !empty($ortu) ? $ortu : '' ?>">
         </label>
 
-        <label>
+        <label for="txtKakak">
           <span>Nama Kakak:</span>
-          <input type="text" name="txtKakak" value="<?= htmlspecialchars($kakak); ?>">
+          <input type="text" id="txtKakak" name="txtKakak"
+            placeholder="Masukkan nama kakak"
+            value="<?= !empty($kakak) ? $kakak : '' ?>">
         </label>
 
-        <label>
+        <label for="txtAdik">
           <span>Nama Adik:</span>
-          <input type="text" name="txtAdik" value="<?= htmlspecialchars($adik); ?>">
+          <input type="text" id="txtAdik" name="txtAdik"
+            placeholder="Masukkan nama adik"
+            value="<?= !empty($adik) ? $adik : '' ?>">
         </label>
+
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
