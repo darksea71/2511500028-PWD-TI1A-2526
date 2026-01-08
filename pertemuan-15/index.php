@@ -128,12 +128,6 @@ require_once __DIR__ . '/fungsi.php';
       </form>
     </section>
 
-
-    <section id="about">
-      <h2>Tentang Saya</h2>
-      <?php include ' '; ?>
-    </section>
-
     <?php
     $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
     $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error
