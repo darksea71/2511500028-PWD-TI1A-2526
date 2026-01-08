@@ -27,7 +27,7 @@ if (!$stmt) {
   redirect_ke('biodata_read.php');
 }
 
-mysqli_stmt_bind_param($stmt, "s", $cnim);
+mysqli_stmt_bind_param($stmt, "i", $cnim);
 mysqli_stmt_execute($stmt);
 $res = mysqli_stmt_get_result($stmt);
 $row = mysqli_fetch_assoc($res);
