@@ -11,23 +11,23 @@ if (!$q) {
 ?>
 
 <?php
-$flash_sukses = $_SESSION['flash_sukses'] ?? '';
-$flash_error  = $_SESSION['flash_error'] ?? '';
+$flash_biodata_sukses = $_SESSION['flash_biodata_sukses'] ?? '';
+$flash_biodata_error  = $_SESSION['flash_biodata_error'] ?? '';
 
-unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
+unset($_SESSION['flash_biodata_sukses'], $_SESSION['flash_biodata_error']);
 ?>
 
-<?php if (!empty($flash_sukses)): ?>
+<?php if (!empty($flash_biodata_sukses)): ?>
   <div style="padding:10px; margin-bottom:10px;
        background:#d4edda; color:#155724; border-radius:6px;">
-    <?= $flash_sukses; ?>
+    <?= $flash_biodata_sukses; ?>
   </div>
 <?php endif; ?>
 
-<?php if (!empty($flash_error)): ?>
+<?php if (!empty($flash_biodata_error)): ?>
   <div style="padding:10px; margin-bottom:10px;
        background:#f8d7da; color:#721c24; border-radius:6px;">
-    <?= $flash_error; ?>
+    <?= $flash_biodata_error; ?>
   </div>
 <?php endif; ?>
 
