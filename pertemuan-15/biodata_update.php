@@ -9,8 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_ke('biodata_read.php');
 }
 
-// Ambil dan validasi NIM
-$nim = filter_input(INPUT_POST, 'txtNim', FILTER_SANITIZE_NUMBER_INT);
+$cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
+    'options' => ['min_range' => 1]
+]);
 
 if (!$nim || !ctype_digit($nim)) {
     $_SESSION['flash_biodata_error'] = 'NIM tidak valid.';

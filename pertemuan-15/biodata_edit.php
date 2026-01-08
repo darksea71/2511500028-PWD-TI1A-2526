@@ -4,9 +4,11 @@ require 'koneksi.php';
 require 'fungsi.php';
 
 
-$cnim = filter_input(INPUT_GET, 'cnim', FILTER_VALIDATE_INT);
+$cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
+  'options' => ['min_range' => 1]
+]);
 
-if (!$cnim) {
+if (!$cid) {
   $_SESSION['flash_biodata_error'] = 'Akses tidak valid.';
   redirect_ke('biodata_read.php');
 }
@@ -14,11 +16,11 @@ if (!$cnim) {
 
 $stmt = mysqli_prepare(
   $conn,
-  "SELECT cnim, cnama_lengkap, ctempat_lahir, ctanggal_lahir,
+  "SELECT cid, cnim, cnama_lengkap, ctempat_lahir, ctanggal_lahir,
           chobi, cpasangan, cpekerjaan,
           cnama_orang_tua, cnama_kakak, cnama_adik
    FROM tbl_biodata_mahasiswa
-   WHERE cnim = ?
+   WHERE cid = ?
    LIMIT 1"
 );
 
@@ -27,7 +29,7 @@ if (!$stmt) {
   redirect_ke('biodata_read.php');
 }
 
-mysqli_stmt_bind_param($stmt, "i", $cnim);
+mysqli_stmt_bind_param($stmt, "i", $cid);
 mysqli_stmt_execute($stmt);
 $res = mysqli_stmt_get_result($stmt);
 $row = mysqli_fetch_assoc($res);
@@ -95,6 +97,8 @@ if (!empty($old)) {
       <?php endif; ?>
 
       <form action="biodata_update.php" method="POST">
+
+        <input type="text" name="cid" value="<?= (int)$cid; ?>">
 
         <label for="txtNim">
           <span>NIM:</span>
