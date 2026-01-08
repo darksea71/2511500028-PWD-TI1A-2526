@@ -12,4 +12,7 @@ Hari ini, Rabu 24 Desember 2025, saya mempelajari:
     <li>menambahkan link edit dan link hapus pada biodata_read.php</li>
     <li>membuat file biodata_edit.php</li>
     <li>edit index.php</li>
+    <li>membuat file biodata_update.php dan mengisi kode</li>
+    <li>membuat file biodata_delete.php dan mengisi kode</li>
+    <li>export database db_pwd2025.sql</li>
 </ol>
