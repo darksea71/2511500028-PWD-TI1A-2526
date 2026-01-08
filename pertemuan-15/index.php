@@ -55,9 +55,9 @@ require_once __DIR__ . '/fungsi.php';
         </div>
       <?php endif; ?>
 
-      <?php if (!empty($flash_error)): ?>
+      <?php if (!empty($flash_biodata_error)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
-          <?= $flash_error; ?>
+          <?= $flash_biodata_error; ?>
         </div>
       <?php endif; ?>
 
@@ -129,26 +129,9 @@ require_once __DIR__ . '/fungsi.php';
     </section>
 
 
-    <?php
-    $biodata = $_SESSION['old_biodata'] ?? [];
-
-    $fieldConfig = [
-      "nim" => ["label" => "NIM:", "suffix" => ""],
-      "nama" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
-      "tempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
-      "tanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
-      "hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
-      "pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
-      "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
-      "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
-      "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
-      "adik" => ["label" => "Nama Adik:", "suffix" => ""],
-    ];
-    ?>
-
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata($fieldConfig, $biodata) ?>
+      <?php include ' '; ?>
     </section>
 
     <?php
