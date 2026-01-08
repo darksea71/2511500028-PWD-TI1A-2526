@@ -11,4 +11,5 @@ Hari ini, Rabu 24 Desember 2025, saya mempelajari:
     <li>membuat file bioadata_read.php sebagai file pembaca data biodata mahasiswa</li>
     <li>menambahkan link edit dan link hapus pada biodata_read.php</li>
     <li>membuat file biodata_edit.php</li>
+    <li>edit index.php</li>
 </ol>
