@@ -13,9 +13,9 @@ $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
 ]);
 
-if (!$nim || !ctype_digit($nim)) {
-    $_SESSION['flash_biodata_error'] = 'NIM tidak valid.';
-    redirect_ke('biodata_edit.php?cnim=' . urlencode($nim));
+if (!$cid) {
+    $_SESSION['flash_biodata_error'] = 'CID Tidak Valid.';
+    redirect_ke('biodata_edit.php?cid='. (int)$cid);
 }
 
 // Ambil dan bersihkan input lain
@@ -52,23 +52,23 @@ if (!empty($errors)) {
         'adik'      => $adik,
     ];
     $_SESSION['flash_biodata_error'] = implode('<br>', $errors);
-    redirect_ke('biodata_edit.php?cnim=' . urlencode($nim));
+    redirect_ke('biodata_edit.php?cid='. (int)$cid);
 }
 
 // Prepared statement UPDATE
 $stmt = mysqli_prepare($conn, "UPDATE tbl_biodata_mahasiswa
     SET cnama_lengkap = ?, ctempat_lahir = ?, ctanggal_lahir = ?, chobi = ?,
         cpasangan = ?, cpekerjaan = ?, cnama_orang_tua = ?, cnama_kakak = ?, cnama_adik = ?
-    WHERE cnim = ?");
+    WHERE cid = ?");
 
 if (!$stmt) {
-    $_SESSION['flash_biodata_error'] = 'Kesalahan sistem (prepare statement gagal).';
-    redirect_ke('biodata_edit.php?cnim=' . urlencode($nim));
+    $_SESSION['flash_biodata_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+    redirect_ke('biodata_edit.php?cid='. (int)$cid);
 }
 
 mysqli_stmt_bind_param(
     $stmt,
-    "ssssssssss",
+    "ssssssssssi",
     $nama,
     $tempat,
     $tanggal,
@@ -79,6 +79,7 @@ mysqli_stmt_bind_param(
     $kakak,
     $adik,
     $nim
+    $cid
 );
 
 // Eksekusi
@@ -88,9 +89,11 @@ if (mysqli_stmt_execute($stmt)) {
     redirect_ke('biodata_read.php');
 } else {
     $_SESSION['old_biodata'] = $_POST;
-    $_SESSION['flash_biodata_error'] = 'Data gagal diperbarui. Silakan coba lagi.';
-    redirect_ke('biodata_edit.php?cnim=' . urlencode($nim));
+    $_SESSION['flash_biodata_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
+    redirect_ke('biodata_edit.php?cid='. (int)$cid);
 }
 
 // Tutup statement
 mysqli_stmt_close($stmt);
+
+redirect_ke('biodata_edit.php?cid='. (int)$cid);
