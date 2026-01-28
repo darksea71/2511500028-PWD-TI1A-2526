@@ -71,21 +71,21 @@ if (!$stmt) {
 mysqli_stmt_bind_param(
     $stmt,
     "ssssssssss",
-    $nim,
+    $kode,
     $nama,
-    $tempat,
+    $alamat,
     $tanggal,
-    $hobi,
+    $jja,
+    $prodi,
+    $hp,
     $pasangan,
-    $pekerjaan,
-    $ortu,
-    $kakak,
-    $adik
+    $anak,
+    $bidang
 );
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old_biodata']);
-    $_SESSION['flash_biodata_sukses'] = 'Biodata mahasiswa berhasil disimpan.';
+    $_SESSION['flash_biodata_sukses'] = 'Biodata dosen berhasil disimpan.';
     redirect_ke('index.php#biodata');
 } else {
     $_SESSION['old_biodata'] = $_POST;
