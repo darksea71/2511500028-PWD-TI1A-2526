@@ -39,16 +39,16 @@ if (!ctype_digit($nim))$errors[] = 'NIM harus berupa angka.';
 
 if (!empty($errors)) {
     $_SESSION['old_biodata'] = [
-        'kode'       => $nim,
+        'kode'      => $kode,
         'nama'      => $nama,
-        'alamat'    => $tempat,
+        'alamat'    => $alamat,
         'tanggal'   => $tanggal,
-        'jja'      => $hobi,
-        'prodi'  => $pasangan,
-        'hp' => $pekerjaan,
-        'pasangan'      => $ortu,
-        'anak'     => $kakak,
-        'bidang'      => $adik,
+        'jja'       => $jja,
+        'prodi'     => $prodi,
+        'hp'        => $hp,
+        'pasangan'  => $pasangan,
+        'anak'      => $anak,
+        'bidang'    => $bidang,
     ];
 
     $_SESSION['flash_biodata_error'] = implode('<br>', $errors);
@@ -56,9 +56,9 @@ if (!empty($errors)) {
 }
 
 
-$sql = "INSERT INTO tbl_biodata_mahasiswa
-        (cnim, cnama_lengkap, ctempat_lahir, ctanggal_lahir, chobi,
-         cpasangan, cpekerjaan, cnama_orang_tua, cnama_kakak, cnama_adik)
+$sql = "INSERT INTO tbl_biodata_dosen
+        (ckode_dosen, cnama_dosen, calamat_rumah, ctanggal_jadi_dosen, 	cjja_dosen,
+         chomebase_prodi, cnomor_hp, cnama_pasangan, cnama_anak, cbidang_ilmu_dosen)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($conn, $sql);
