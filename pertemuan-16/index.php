@@ -63,23 +63,23 @@ require_once __DIR__ . '/fungsi.php';
 
       <form action="biodata_proses.php" method="POST">
 
-        <label for="txtKodeDos"><span>Kode Dosen:</span>
+        <label for="txtKode"><span>Kode Dosen:</span>
           <input type="text" id="txtKodeDos" name="txtKodeDos" placeholder="Masukkan Kode Dosen" required>
         </label>
 
-        <label for="txtNmDosen"><span>Nama Dosen:</span>
+        <label for="txtNama"><span>Nama Dosen:</span>
           <input type="text" id="txtNmDosen" name="txtNmDosen" placeholder="Masukkan Nama Dosen" required>
         </label>
 
-        <label for="txtAlRmh"><span>Alamat Rumah:</span>
+        <label for="txtAlamat"><span>Alamat Rumah:</span>
           <input type="text" id="txtAlRmh" name="txtAlRmh" placeholder="Masukkan Alamat Rumah" required>
         </label>
 
-        <label for="txtTglDosen"><span>Tanggal Jadi Dosen:</span>
+        <label for="txtTanggal"><span>Tanggal Jadi Dosen:</span>
           <input type="text" id="txtTglDosen" name="txtTglDosen" placeholder="Masukkan Tanggal Jadi Dosen" required>
         </label>
 
-        <label for="txtJJA"><span>JJA Dosen:</span>
+        <label for="txtJja"><span>JJA Dosen:</span>
           <input type="text" id="txtJJA" name="txtJJA" placeholder="Masukkan JJA Dosen" required>
         </label>
 
@@ -87,19 +87,19 @@ require_once __DIR__ . '/fungsi.php';
           <input type="text" id="txtProdi" name="txtProdi" placeholder="Masukkan Homebase Prodi" required>
         </label>
 
-        <label for="txtNoHP"><span>Nomor HP:</span>
+        <label for="txtHP"><span>Nomor HP:</span>
           <input type="text" id="txtNoHP" name="txtNoHP" placeholder="Masukkan Nomor HP" required>
         </label>
 
-        <label for="txNamaPasangan"><span>Nama Pasangan:</span>
+        <label for="txtPasangan"><span>Nama Pasangan:</span>
           <input type="text" id="txNamaPasangan" name="txNamaPasangan" placeholder="Masukkan Nama Pasangan" required>
         </label>
 
-        <label for="txtNmAnak"><span>Nama Anak:</span>
+        <label for="txtAnak"><span>Nama Anak:</span>
           <input type="text" id="txtNmAnak" name="txtNmAnak" placeholder="Masukkan Nama Anak" required>
         </label>
 
-        <label for="txtBidangIlmu"><span>Bidang Ilmu Dosen:</span>
+        <label for="txtBidang"><span>Bidang Ilmu Dosen:</span>
           <input type="text" id="txtBidangIlmu" name="txtBidangIlmu" placeholder="Masukkan Bidang Ilmu Dosen" required>
         </label>
 
