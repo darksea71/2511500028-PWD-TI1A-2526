@@ -68,3 +68,87 @@ if (!empty($old)) {
 }
 ?>
 
+<header>
+  <h1>Edit Biodata Dosen</h1>
+</header>
+
+<section id="biodata">
+  <h2>Form Edit Biodata Dosen</h2>
+
+  <?php if (!empty($flash_error)): ?>
+    <div style="padding:10px; margin-bottom:10px;
+      background:#f8d7da; color:#721c24; border-radius:6px;">
+      <?= $flash_error; ?>
+    </div>
+  <?php endif; ?>
+
+  <form action="biodata_update.php" method="POST">
+
+    <input type="hidden" name="ckode" value="<?= (int)$ckode; ?>">
+
+    <label for="txtKode">
+      <span>Kode Dosen:</span>
+      <input type="text" id="txtKode" name="txtKode"
+        value="<?= $kode ?>" readonly>
+    </label>
+
+    <label for="txtNama">
+      <span>Nama Dosen:</span>
+      <input type="text" id="txtNama" name="txtNama" required
+        value="<?= $nama ?>">
+    </label>
+
+    <label for="txtAlamat">
+      <span>Alamat Rumah:</span>
+      <input type="text" id="txtAlamat" name="txtAlamat" required
+        value="<?= $alamat ?>">
+    </label>
+
+    <label for="txtTanggal">
+      <span>Tanggal Jadi Dosen:</span>
+      <input type="date" id="txtTanggal" name="txtTanggal" required
+        value="<?= $tanggal ?>">
+    </label>
+
+    <label for="txtJja">
+      <span>JJA Dosen:</span>
+      <input type="text" id="txtJja" name="txtJja"
+        value="<?= $jja ?>">
+    </label>
+
+    <label for="txtProdi">
+      <span>Homebase Prodi:</span>
+      <input type="text" id="txtProdi" name="txtProdi"
+        value="<?= $prodi ?>">
+    </label>
+
+    <label for="txtHp">
+      <span>Nomor HP:</span>
+      <input type="text" id="txtHp" name="txtHp"
+        value="<?= $hp ?>">
+    </label>
+
+    <label for="txtPasangan">
+      <span>Nama Pasangan:</span>
+      <input type="text" id="txtPasangan" name="txtPasangan"
+        value="<?= $pasangan ?>">
+    </label>
+
+    <label for="txtAnak">
+      <span>Nama Anak:</span>
+      <input type="text" id="txtAnak" name="txtAnak"
+        value="<?= $anak ?>">
+    </label>
+
+    <label for="txtBidang">
+      <span>Bidang Ilmu Dosen:</span>
+      <input type="text" id="txtBidang" name="txtBidang"
+        value="<?= $bidang ?>">
+    </label>
+
+    <button type="submit">Simpan</button>
+    <button type="reset">Batal</button>
+    <a href="biodata_read.php">Kembali</a>
+
+  </form>
+</section>
