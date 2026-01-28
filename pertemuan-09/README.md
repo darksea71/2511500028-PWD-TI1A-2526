@@ -17,4 +17,7 @@ Hari ini, Rabu 26 November 2025, saya mempelajari:
     <li>menambahkan kode require_once pada index.php</li>
     <li>mengubah data POST KE Array Associative di proses.php pada kontak</li>
     <li>membuat kode session kontak di proses.php</li>
+    <li>menghapus dan menambahkan kode session kontak di index.php</li>
+    <li>menampikan kontak di index.php</li>
+    <li>menambahkan style pada #kontak</li>
 </ol>

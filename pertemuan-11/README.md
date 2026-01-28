@@ -11,4 +11,5 @@ Hari ini, Rabu 03 Desember 2025, saya mempelajari:
     <li>menambahkan nomor urut (bukan ID) dan tabel Create Art pada read.php di kolom pertama</li>
     <li>menambahkan kode validasi dan input captcha sederhana pada proses.php</li>
     <li>menambahkan kode form captcha pada index.php</li>
+    <li>export database db_pwd2025</li>
 </ol>

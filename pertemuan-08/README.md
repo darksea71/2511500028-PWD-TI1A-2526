@@ -12,4 +12,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>membuat section pendaftaran profil pengunjung</li>
   <li>membuat style untuk section#register</li>
   <li>membuat kode proses register di proses.php</li>
+  <li>membuat profil pengunjung dikirim dengan method POST </li>
 </ol>
