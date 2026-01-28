@@ -10,24 +10,24 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_ke('index.php#biodata');
 }
 
-$nim       = bersihkan($_POST['txtNim'] ?? '');
+$kode      = bersihkan($_POST['txtKode'] ?? '');
 $nama      = bersihkan($_POST['txtNama'] ?? '');
-$tempat    = bersihkan($_POST['txtTempat'] ?? '');
+$alamat    = bersihkan($_POST['txtalamat'] ?? '');
 $tanggal   = bersihkan($_POST['txtTanggal'] ?? '');
-$hobi      = bersihkan($_POST['txtHobi'] ?? '');
+$jja       = bersihkan($_POST['txtJja'] ?? '');
+$prodi     = bersihkan($_POST['txtProdi'] ?? '');
+$hp        = bersihkan($_POST['txtHp'] ?? '');
 $pasangan  = bersihkan($_POST['txtPasangan'] ?? '');
-$pekerjaan = bersihkan($_POST['txtPekerjaan'] ?? '');
-$ortu      = bersihkan($_POST['txtOrtu'] ?? '');
-$kakak     = bersihkan($_POST['txtKakak'] ?? '');
-$adik      = bersihkan($_POST['txtAdik'] ?? '');
+$anak      = bersihkan($_POST['txtAnak'] ?? '');
+$bidang    = bersihkan($_POST['txtBidang'] ?? '');
 
 
 $errors = [];
 
-if ($nim === '')      $errors[] = 'NIM wajib diisi.';
-if ($nama === '')     $errors[] = 'Nama lengkap wajib diisi.';
-if ($tempat === '')   $errors[] = 'Tempat lahir wajib diisi.';
-if ($tanggal === '')  $errors[] = 'Tanggal lahir wajib diisi.';
+if ($kode === '')      $errors[] = 'Kode Dosen wajib diisi.';
+if ($nama === '')     $errors[] = 'Nama dosen wajib diisi.';
+if ($alamat === '')   $errors[] = 'alamat rumah wajib diisi.';
+if ($tanggal === '')  $errors[] = 'Tanggal jadi dosen wajib diisi.';
 
 if (strlen($nim) < 5)  $errors[] = 'NIM minimal 5 angka.';
 if (strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
