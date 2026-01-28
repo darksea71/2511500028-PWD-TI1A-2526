@@ -48,7 +48,20 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="biodata">
       <h2>Biodata Dosen</h2>
-      <form action="proses_bio.php" method="POST">
+
+      <?php if (!empty($flash_biodata_sukses)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+          <?= $flash_biodata_sukses; ?>
+        </div>
+      <?php endif; ?>
+
+      <?php if (!empty($flash_biodata_error)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_biodata_error; ?>
+        </div>
+      <?php endif; ?>
+
+      <form action="biodata_proses.php" method="POST">
 
         <label for="txtKodeDos"><span>Kode Dosen:</span>
           <input type="text" id="txtKodeDos" name="txtKodeDos" placeholder="Masukkan Kode Dosen" required>
