@@ -63,61 +63,61 @@ require_once __DIR__ . '/fungsi.php';
 
       <form action="biodata_proses.php" method="POST">
 
-        <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNim"
-            placeholder="Masukkan NIM" required
-            value="<?= isset($old['nim']) ? htmlspecialchars($old['nim']) : '' ?>">
+        <label for="txtKode"><span>Kode Dosen</span>
+          <input type="text" id="txtKode" name="txtKode"
+            placeholder="Masukkan Kode" required
+            value="<?= isset($old['kode']) ? htmlspecialchars($old['kode']) : '' ?>">
         </label>
 
-        <label for="txtNama"><span>Nama Lengkap:</span>
+        <label for="txtNama"><span>Nama Dosen:</span>
           <input type="text" id="txtNama" name="txtNama"
             placeholder="Masukkan Nama Lengkap" required
             value="<?= isset($old['nama']) ? htmlspecialchars($old['nama']) : '' ?>">
         </label>
 
-        <label for="txtTempat"><span>Tempat Lahir:</span>
+        <label for="txtTempat"><span>Alamat Rumah</span>
           <input type="text" id="txtTempat" name="txtTempat"
             placeholder="Masukkan Tempat Lahir" required
             value="<?= isset($old['tempat']) ? htmlspecialchars($old['tempat']) : '' ?>">
         </label>
 
-        <label for="txtTanggal"><span>Tanggal Lahir:</span>
+        <label for="txtTanggal"><span>Tanggal Jadi Dosen:</span>
           <input type="date" id="txtTanggal" name="txtTanggal"
             required
             value="<?= isset($old['tanggal']) ? htmlspecialchars($old['tanggal']) : '' ?>">
         </label>
 
-        <label for="txtHobi"><span>Hobi:</span>
+        <label for="txtHobi"><span>JJA Dosen:</span>
           <input type="text" id="txtHobi" name="txtHobi"
             placeholder="Masukkan Hobi"
             value="<?= isset($old['hobi']) ? htmlspecialchars($old['hobi']) : '' ?>">
         </label>
 
-        <label for="txtPasangan"><span>Pasangan:</span>
+        <label for="txtPasangan"><span>Homebase Prodi:</span>
           <input type="text" id="txtPasangan" name="txtPasangan"
             placeholder="Masukkan Pasangan"
             value="<?= isset($old['pasangan']) ? htmlspecialchars($old['pasangan']) : '' ?>">
         </label>
 
-        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+        <label for="txtPekerjaan"><span>Nomor HP:</span>
           <input type="text" id="txtPekerjaan" name="txtPekerjaan"
             placeholder="Masukkan Pekerjaan"
             value="<?= isset($old['pekerjaan']) ? htmlspecialchars($old['pekerjaan']) : '' ?>">
         </label>
 
-        <label for="txtOrtu"><span>Nama Orang Tua:</span>
+        <label for="txtOrtu"><span>Nama Pasangan:</span>
           <input type="text" id="txtOrtu" name="txtOrtu"
             placeholder="Masukkan Nama Orang Tua"
             value="<?= isset($old['ortu']) ? htmlspecialchars($old['ortu']) : '' ?>">
         </label>
 
-        <label for="txtKakak"><span>Nama Kakak:</span>
+        <label for="txtKakak"><span>Nama Anak:</span>
           <input type="text" id="txtKakak" name="txtKakak"
             placeholder="Masukkan Nama Kakak"
             value="<?= isset($old['kakak']) ? htmlspecialchars($old['kakak']) : '' ?>">
         </label>
 
-        <label for="txtAdik"><span>Nama Adik:</span>
+        <label for="txtAdik"><span>Bidang Ilmu Dosen:</span>
           <input type="text" id="txtAdik" name="txtAdik"
             placeholder="Masukkan Nama Adik"
             value="<?= isset($old['adik']) ? htmlspecialchars($old['adik']) : '' ?>">
