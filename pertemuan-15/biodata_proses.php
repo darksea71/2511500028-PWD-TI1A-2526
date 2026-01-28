@@ -24,10 +24,14 @@ $bidang    = bersihkan($_POST['txtBidang'] ?? '');
 
 $errors = [];
 
-if ($kode === '')      $errors[] = 'Kode Dosen wajib diisi.';
+if ($kode === '')     $errors[] = 'Kode dosen wajib diisi.';
 if ($nama === '')     $errors[] = 'Nama dosen wajib diisi.';
 if ($alamat === '')   $errors[] = 'alamat rumah wajib diisi.';
 if ($tanggal === '')  $errors[] = 'Tanggal jadi dosen wajib diisi.';
+if ($jja === '')      $errors[] = 'Jja dosen wajib diisi.';
+if ($prodi === '')    $errors[] = 'Homebase prodi wajib diisi.';
+if ($hp === '')       $errors[] = 'Nomor HP wajib diisi.';
+if ($bidang === '')      $errors[] = 'Bidang ilmu dosen wajib diisi.';
 
 if (strlen($nim) < 5)  $errors[] = 'NIM minimal 5 angka.';
 if (strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
