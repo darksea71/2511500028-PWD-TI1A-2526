@@ -9,4 +9,6 @@ Hari ini, Rabu 28 Januari 2026, saya mempelajari:
     <li>membuat file biodata_proses.php</li>
     <li>mengedit index.php</li>
     <li>membuat file biodata_edit.php</li>
+    <li>membuat biodata_read.php</li>
+    <li>membuat biodata_update.php</li>
 </ol>
