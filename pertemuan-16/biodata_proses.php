@@ -33,9 +33,9 @@ if ($prodi === '')    $errors[] = 'Homebase prodi wajib diisi.';
 if ($hp === '')       $errors[] = 'Nomor HP wajib diisi.';
 if ($bidang === '')   $errors[] = 'Bidang ilmu dosen wajib diisi.';
 
-if (strlen($kode) < 5)  $errors[] = 'kode minimal 5 angka.';
+if (strlen($kode) < 5)  $errors[] = 'Kode minimal 5 angka.';
 if (strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
-if (!ctype_digit($nim))$errors[] = 'NIM harus berupa angka.';
+if (!ctype_digit($kode))$errors[] = 'Kode harus berupa angka.';
 
 if (!empty($errors)) {
     $_SESSION['old_biodata'] = [
