@@ -10,28 +10,24 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_ke('index.php#biodata');
 }
 
-$kode      = bersihkan($_POST['txtKode'] ?? '');
+$nim       = bersihkan($_POST['txtNim'] ?? '');
 $nama      = bersihkan($_POST['txtNama'] ?? '');
-$alamat    = bersihkan($_POST['txtalamat'] ?? '');
+$tempat    = bersihkan($_POST['txtTempat'] ?? '');
 $tanggal   = bersihkan($_POST['txtTanggal'] ?? '');
-$jja       = bersihkan($_POST['txtJja'] ?? '');
-$prodi     = bersihkan($_POST['txtProdi'] ?? '');
-$hp        = bersihkan($_POST['txtHp'] ?? '');
+$hobi      = bersihkan($_POST['txtHobi'] ?? '');
 $pasangan  = bersihkan($_POST['txtPasangan'] ?? '');
-$anak      = bersihkan($_POST['txtAnak'] ?? '');
-$bidang    = bersihkan($_POST['txtBidang'] ?? '');
+$pekerjaan = bersihkan($_POST['txtPekerjaan'] ?? '');
+$ortu      = bersihkan($_POST['txtOrtu'] ?? '');
+$kakak     = bersihkan($_POST['txtKakak'] ?? '');
+$adik      = bersihkan($_POST['txtAdik'] ?? '');
 
 
 $errors = [];
 
-if ($kode === '')     $errors[] = 'Kode dosen wajib diisi.';
-if ($nama === '')     $errors[] = 'Nama dosen wajib diisi.';
-if ($alamat === '')   $errors[] = 'alamat rumah wajib diisi.';
-if ($tanggal === '')  $errors[] = 'Tanggal jadi dosen wajib diisi.';
-if ($jja === '')      $errors[] = 'Jja dosen wajib diisi.';
-if ($prodi === '')    $errors[] = 'Homebase prodi wajib diisi.';
-if ($hp === '')       $errors[] = 'Nomor HP wajib diisi.';
-if ($bidang === '')   $errors[] = 'Bidang ilmu dosen wajib diisi.';
+if ($nim === '')      $errors[] = 'NIM wajib diisi.';
+if ($nama === '')     $errors[] = 'Nama lengkap wajib diisi.';
+if ($tempat === '')   $errors[] = 'Tempat lahir wajib diisi.';
+if ($tanggal === '')  $errors[] = 'Tanggal lahir wajib diisi.';
 
 if (strlen($nim) < 5)  $errors[] = 'NIM minimal 5 angka.';
 if (strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
@@ -39,16 +35,16 @@ if (!ctype_digit($nim))$errors[] = 'NIM harus berupa angka.';
 
 if (!empty($errors)) {
     $_SESSION['old_biodata'] = [
-        'kode'      => $kode,
+        'nim'       => $nim,
         'nama'      => $nama,
-        'alamat'    => $alamat,
+        'tempat'    => $tempat,
         'tanggal'   => $tanggal,
-        'jja'       => $jja,
-        'prodi'     => $prodi,
-        'hp'        => $hp,
+        'hobi'      => $hobi,
         'pasangan'  => $pasangan,
-        'anak'      => $anak,
-        'bidang'    => $bidang,
+        'pekerjaan' => $pekerjaan,
+        'ortu'      => $ortu,
+        'kakak'     => $kakak,
+        'adik'      => $adik,
     ];
 
     $_SESSION['flash_biodata_error'] = implode('<br>', $errors);
@@ -56,9 +52,9 @@ if (!empty($errors)) {
 }
 
 
-$sql = "INSERT INTO tbl_biodata_dosen
-        (ckode_dosen, cnama_dosen, calamat_rumah, ctanggal_jadi_dosen, 	cjja_dosen,
-         chomebase_prodi, cnomor_hp, cnama_pasangan, cnama_anak, cbidang_ilmu_dosen)
+$sql = "INSERT INTO tbl_biodata_mahasiswa
+        (cnim, cnama_lengkap, ctempat_lahir, ctanggal_lahir, chobi,
+         cpasangan, cpekerjaan, cnama_orang_tua, cnama_kakak, cnama_adik)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($conn, $sql);
@@ -71,21 +67,21 @@ if (!$stmt) {
 mysqli_stmt_bind_param(
     $stmt,
     "ssssssssss",
-    $kode,
+    $nim,
     $nama,
-    $alamat,
+    $tempat,
     $tanggal,
-    $jja,
-    $prodi,
-    $hp,
+    $hobi,
     $pasangan,
-    $anak,
-    $bidang
+    $pekerjaan,
+    $ortu,
+    $kakak,
+    $adik
 );
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old_biodata']);
-    $_SESSION['flash_biodata_sukses'] = 'Biodata dosen berhasil disimpan.';
+    $_SESSION['flash_biodata_sukses'] = 'Biodata mahasiswa berhasil disimpan.';
     redirect_ke('index.php#biodata');
 } else {
     $_SESSION['old_biodata'] = $_POST;
