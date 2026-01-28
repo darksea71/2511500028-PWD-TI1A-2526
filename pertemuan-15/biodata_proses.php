@@ -39,16 +39,16 @@ if (!ctype_digit($nim))$errors[] = 'NIM harus berupa angka.';
 
 if (!empty($errors)) {
     $_SESSION['old_biodata'] = [
-        'nim'       => $nim,
+        'kode'       => $nim,
         'nama'      => $nama,
-        'tempat'    => $tempat,
+        'alamat'    => $tempat,
         'tanggal'   => $tanggal,
-        'hobi'      => $hobi,
-        'pasangan'  => $pasangan,
-        'pekerjaan' => $pekerjaan,
-        'ortu'      => $ortu,
-        'kakak'     => $kakak,
-        'adik'      => $adik,
+        'jja'      => $hobi,
+        'prodi'  => $pasangan,
+        'hp' => $pekerjaan,
+        'pasangan'      => $ortu,
+        'anak'     => $kakak,
+        'bidang'      => $adik,
     ];
 
     $_SESSION['flash_biodata_error'] = implode('<br>', $errors);
