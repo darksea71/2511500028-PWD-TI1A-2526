@@ -89,7 +89,7 @@ if (!empty($old)) {
     <label for="txtKode">
       <span>Kode Dosen:</span>
       <input type="text" id="txtKode" name="txtKode"
-        value="<?= $kode ?>" readonly>
+        value="<?= $kode ?>">
     </label>
 
     <label for="txtNama">

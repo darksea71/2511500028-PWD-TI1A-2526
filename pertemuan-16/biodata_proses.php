@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $kode      = bersihkan($_POST['txtKode'] ?? '');
 $nama      = bersihkan($_POST['txtNama'] ?? '');
-$alamat    = bersihkan($_POST['txtalamat'] ?? '');
+$alamat    = bersihkan($_POST['txtAlamat'] ?? '');
 $tanggal   = bersihkan($_POST['txtTanggal'] ?? '');
 $jja       = bersihkan($_POST['txtJja'] ?? '');
 $prodi     = bersihkan($_POST['txtProdi'] ?? '');
